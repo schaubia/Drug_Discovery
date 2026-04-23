@@ -1,0 +1,54 @@
+# Drug Discovery Pipeline — Requirements
+# Python 3.10 | RTX 3070 (CUDA 12.1)
+#
+# Install order matters — run 00_setup.ipynb which handles this automatically,
+# or install manually in this order:
+#
+#   pip install -r requirements.txt
+#
+# For CUDA-enabled PyTorch (required for RTX 3070):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+# ── Core scientific stack ─────────────────────────────────────────
+numpy>=1.24,<2.0
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.11
+
+# ── Chemistry ────────────────────────────────────────────────────
+rdkit>=2023.9.1
+PyTDC>=0.4.1
+
+# ── Deep learning ────────────────────────────────────────────────
+# PyTorch — install CUDA version manually (see note above)
+torch>=2.1
+torch-geometric>=2.4
+
+# ── DeepChem (GNN models) ─────────────────────────────────────────
+deepchem>=2.7
+
+# ── Transformers (ChemBERTa-2) ────────────────────────────────────
+transformers>=4.36
+datasets>=2.16
+tokenizers>=0.15
+
+# ── Energy & resource tracking ───────────────────────────────────
+codecarbon>=2.3
+psutil>=5.9
+gpustat>=1.1
+pynvml>=11.5
+
+# ── Hyperparameter optimization ──────────────────────────────────
+optuna>=3.4
+
+# ── Visualization ────────────────────────────────────────────────
+matplotlib>=3.7
+seaborn>=0.13
+plotly>=5.18
+umap-learn>=0.5.5
+
+# ── Utilities ────────────────────────────────────────────────────
+tqdm>=4.66
+ipywidgets>=8.1
+joblib>=1.3
+ipykernel>=6.27
