@@ -8,7 +8,8 @@
   "test_size": 0.2,
   "val_size": 0.1,
   "target": "EGFR",
-  "tdc_dataset": "EGFR_DrugBankFull",
+  "data_source": "ChEMBL",
+  "raw_data": "./data/egfr_raw.csv",
   "task": "regression",
   "models": [
     "rf_morgan",
@@ -18,6 +19,5 @@
   ],
   "data_dir": "./data/",
   "model_dir": "./models/",
-  "results_dir": "./results/",
-  "gpt_rosalind_bixbench": null
+  "results_dir": "./results/"
 }
