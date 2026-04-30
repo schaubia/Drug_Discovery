@@ -49,10 +49,23 @@ then optimize it for maximum efficiency on a consumer GPU.
 
 ## Environment
 
-```bash
+```cmd
+Step 1 — Create the environment (in your new cmd/Anaconda Prompt):
 conda create -n drug_discovery python=3.10
+This will ask Proceed ([y]/n)? — type y and wait ~2 minutes.
+Step 2 — Activate it:
 conda activate drug_discovery
-# Then run 00_setup.ipynb for full installation
+You should see (drug_discovery) appear at the start of the prompt line.
+Step 3 — Install Jupyter inside the environment:
+pip install jupyter ipykernel
+python -m ipykernel install --user --name drug_discovery --display-name "drug_discovery"
+Step 4 — Install PyTorch with CUDA for your RTX 3070 (do this before the notebook, it's the heaviest install and needs the right CUDA version):
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+This will download ~2.5GB — normal, just wait for it.
+Step 5 — Navigate to your project folder and launch Jupyter:
+cd "D:\courses\ML\My projects\Applications\Drug_Discovery"
+jupyter notebook
+Step 6 — THEN open 00_setup.ipynb in the browser that pops up, make sure the kernel in the top-right says drug_discovery, and run it top to bottom.     
 ```
 
 ---
