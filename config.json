@@ -1,0 +1,23 @@
+{
+  "gpu": "RTX 3070",
+  "vram_gb": 8,
+  "use_amp": true,
+  "batch_size": 64,
+  "num_workers": 4,
+  "random_seed": 42,
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "target": "EGFR",
+  "tdc_dataset": "EGFR_DrugBankFull",
+  "task": "regression",
+  "models": [
+    "rf_morgan",
+    "attentivefp",
+    "mpnn_deepchem",
+    "chemberta2"
+  ],
+  "data_dir": "./data/",
+  "model_dir": "./models/",
+  "results_dir": "./results/",
+  "gpt_rosalind_bixbench": null
+}
